@@ -6,22 +6,22 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name = "THING")
 public class Thing {
-	
-	public Thing() {}
+
+	public Thing() {
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@NotEmpty
+	@NotBlank
 	@Size(max = 15)
 	@Column(name = "NAME")
 	private String name;
@@ -29,17 +29,17 @@ public class Thing {
 	@Size(max = 30)
 	@Column(name = "PLACE")
 	private String place;
-	
+
 	@Size(max = 10)
 	@Column(name = "DATE")
 	private String date;
 
-	@NotNull
+	@NotBlank
 	@Size(max = 13)
 	@Column(name = "PHONE_NUMBER")
 	private String phoneNumber;
 
-	@NotEmpty
+	@NotBlank
 	@Size(max = 5)
 	@Column(name = "LOST_OR_FOUND")
 	private String lostOrFound;

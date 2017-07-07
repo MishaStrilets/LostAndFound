@@ -16,8 +16,8 @@ public class ThingServiceImpl implements ThingService {
 	@Autowired
 	private ThingDao dao;
 
-	public Thing findById(int id) {
-		return dao.findById(id);
+	public Thing getThingById(int id) {
+		return dao.getThingById(id);
 	}
 
 	public void saveThing(Thing thing) {
@@ -25,7 +25,7 @@ public class ThingServiceImpl implements ThingService {
 	}
 
 	public void updateThing(Thing thing) {
-		Thing entity = dao.findById(thing.getId());
+		Thing entity = dao.getThingById(thing.getId());
 		if (entity != null) {
 			entity.setName(thing.getName());
 			entity.setPlace(thing.getPlace());
@@ -39,16 +39,16 @@ public class ThingServiceImpl implements ThingService {
 		dao.deleteThing(id);
 	}
 
-	public List<Thing> findAllThings() {
-		return dao.findAllThings();
+	public List<Thing> getAllThings() {
+		return dao.getAllThings();
 	}
 
-	public List<Thing> lostThings() {
-		return dao.lostThings();
+	public List<Thing> getLostThings() {
+		return dao.getLostThings();
 	}
 
-	public List<Thing> foundThings() {
-		return dao.foundThings();
+	public List<Thing> getFoundThings() {
+		return dao.getFoundThings();
 	}
 
 }

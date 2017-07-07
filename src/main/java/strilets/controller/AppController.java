@@ -36,7 +36,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/", "/list" }, method = { RequestMethod.GET })
 	public String listAllThings(ModelMap model) {
-		List<Thing> things = service.findAllThings();
+		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
 		return "allthings";
 	}
@@ -46,7 +46,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/lost" }, method = { RequestMethod.GET })
 	public String listLostThings(ModelMap model) {
-		List<Thing> things = service.lostThings();
+		List<Thing> things = service.getLostThings();
 		model.addAttribute("things", things);
 		return "allthings";
 	}
@@ -56,7 +56,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/found" }, method = { RequestMethod.GET })
 	public String listFoundThings(ModelMap model) {
-		List<Thing> things = service.foundThings();
+		List<Thing> things = service.getFoundThings();
 		model.addAttribute("things", things);
 		return "allthings";
 	}
@@ -82,7 +82,7 @@ public class AppController {
 			return "statement";
 		}
 		service.saveThing(thing);
-		List<Thing> things = service.findAllThings();
+		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
 		return "allthings";
 	}
@@ -92,9 +92,9 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
 	public String admin(ModelMap model) {
-		List<Thing> things = service.findAllThings();
+		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
-		return "admin";
+		return "allthings";
 	}
 
 	/*
@@ -110,11 +110,13 @@ public class AppController {
 	 * This method will logout administration.
 	 */
 	@RequestMapping(value = { "/logout" }, method = RequestMethod.GET)
-	public String logoutPage(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	public String logoutPage(HttpServletRequest request,
+			HttpServletResponse response, ModelMap model) {
+		Authentication auth = SecurityContextHolder.getContext()
+				.getAuthentication();
 		if (auth != null)
 			new SecurityContextLogoutHandler().logout(request, response, auth);
-		List<Thing> things = service.findAllThings();
+		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
 		return "allthings";
 	}
@@ -124,7 +126,7 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/edit-{id}-thing" }, method = RequestMethod.GET)
 	public String editThing(@PathVariable Integer id, ModelMap model) {
-		Thing thing = service.findById(id);
+		Thing thing = service.getThingById(id);
 		model.addAttribute("thing", thing);
 		model.addAttribute("edit", true);
 		return "statement";
@@ -141,7 +143,7 @@ public class AppController {
 			return "statement";
 		}
 		service.updateThing(thing);
-		return "admin";
+		return "redirect:/admin";
 	}
 
 	/*
@@ -149,9 +151,9 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/admin-lost" }, method = { RequestMethod.GET })
 	public String listLostThingsAdmin(ModelMap model) {
-		List<Thing> things = service.lostThings();
+		List<Thing> things = service.getLostThings();
 		model.addAttribute("things", things);
-		return "admin";
+		return "allthings";
 	}
 
 	/*
@@ -159,9 +161,9 @@ public class AppController {
 	 */
 	@RequestMapping(value = { "/admin-found" }, method = { RequestMethod.GET })
 	public String listFoundThingsAdmin(ModelMap model) {
-		List<Thing> things = service.foundThings();
+		List<Thing> things = service.getFoundThings();
 		model.addAttribute("things", things);
-		return "admin";
+		return "allthings";
 	}
 
 }

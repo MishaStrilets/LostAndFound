@@ -6,16 +6,16 @@ import strilets.model.Thing;
 
 public interface ThingDao {
 
-	Thing findById(int id);
+	Thing getThingById(int id);
 
 	void saveThing(Thing thing);
 
 	void deleteThing(int id);
 
-	List<Thing> findAllThings();
+	List<Thing> getAllThings();
 
-	List<Thing> lostThings();
+	List<Thing> getLostThings();
 
-	List<Thing> foundThings();
+	List<Thing> getFoundThings();
 
 }
