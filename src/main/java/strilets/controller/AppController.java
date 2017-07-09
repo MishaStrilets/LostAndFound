@@ -62,7 +62,7 @@ public class AppController {
 	}
 
 	/*
-	 * This method will add a new found thing.
+	 * This method will return the statement.
 	 */
 	@RequestMapping(value = { "/new" }, method = RequestMethod.GET)
 	public String newThing(ModelMap model) {
@@ -88,7 +88,7 @@ public class AppController {
 	}
 
 	/*
-	 * This method will for administration.
+	 * This method will list all things for admin.
 	 */
 	@RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
 	public String admin(ModelMap model) {
@@ -107,7 +107,7 @@ public class AppController {
 	}
 
 	/*
-	 * This method will logout administration.
+	 * This method will logout admin.
 	 */
 	@RequestMapping(value = { "/logout" }, method = RequestMethod.GET)
 	public String logoutPage(HttpServletRequest request,
@@ -122,7 +122,7 @@ public class AppController {
 	}
 
 	/*
-	 * This method will provide the administration to update an existing thing.
+	 * This method will return the statement for update an existing thing.
 	 */
 	@RequestMapping(value = { "/edit-{id}-thing" }, method = RequestMethod.GET)
 	public String editThing(@PathVariable Integer id, ModelMap model) {
@@ -147,7 +147,7 @@ public class AppController {
 	}
 
 	/*
-	 * This method will list all lost things for administration.
+	 * This method will list all lost things for admin.
 	 */
 	@RequestMapping(value = { "/admin-lost" }, method = { RequestMethod.GET })
 	public String listLostThingsAdmin(ModelMap model) {
@@ -157,7 +157,7 @@ public class AppController {
 	}
 
 	/*
-	 * This method will list all found things for administration.
+	 * This method will list all found things for admin.
 	 */
 	@RequestMapping(value = { "/admin-found" }, method = { RequestMethod.GET })
 	public String listFoundThingsAdmin(ModelMap model) {
