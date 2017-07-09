@@ -32,7 +32,8 @@ public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements
 	@SuppressWarnings("unchecked")
 	public List<Thing> getAllThings() {
 		Criteria criteria = createEntityCriteria();
-		return (List<Thing>) criteria.list();
+		List<Thing> things = criteria.list();
+		return things;
 	}
 
 	@SuppressWarnings("unchecked")
