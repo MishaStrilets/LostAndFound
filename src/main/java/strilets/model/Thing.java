@@ -22,7 +22,7 @@ public class Thing {
 	private int id;
 
 	@NotBlank
-	@Size(max = 15)
+	@Size(max = 20)
 	@Column(name = "NAME")
 	private String name;
 
@@ -35,12 +35,12 @@ public class Thing {
 	private String date;
 
 	@NotBlank
-	@Size(max = 13)
+	@Size(max = 15)
 	@Column(name = "PHONE_NUMBER")
 	private String phoneNumber;
 
 	@NotBlank
-	@Size(max = 5)
+	@Size(max = 10)
 	@Column(name = "LOST_OR_FOUND")
 	private String lostOrFound;
 

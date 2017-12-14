@@ -1,0 +1,30 @@
+body {
+	font-family: Lucida Console;
+	background-color: #ffd454;
+}
+
+.footer {
+	background-color: #636058;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+	text-align: center;
+	color: #ffffff;
+	padding: 7px;
+}
+
+.header {
+	position: fixed;
+	top: -3;
+	left: -16;
+	right: -16;
+	text-align: center;
+	background-color: #ffffff;
+	color: #ffffff;
+	height: 57px;
+	width: 1400px;
+	text-align: center;
+	text-align: center;
+}
