@@ -9,47 +9,46 @@
 		<div class="header">
 			<nav class="navbar">
 				<div class="container-fluid">
-
 					<ul class="nav navbar-nav">
 						<li
-							style="background-color: #1945e5; width: 275px; font-size: 20px"><c:if
+							style="background-color: #ffffff; width: 275px; font-size: 20px"><c:if
 								test="${pageContext.request.userPrincipal.name == null}">
-								<a style="color: #ffffff" href="<c:url value='/list' />">Втрачені
+								<a style="color: #000000" href="<c:url value='/list' />">втрачені
 									та знайдені</a>
 							</c:if> <c:if test="${pageContext.request.userPrincipal.name != null}">
-								<a style="color: #ffffff" href="<c:url value='/admin' />">Втрачені
+								<a style="color: #000000" href="<c:url value='/admin' />">втрачені
 									та знайдені</a>
 							</c:if></li>
 
 						<li
-							style="background-color: #ff0019; width: 275px; font-size: 20px"><c:if
+							style="background-color: #e1e1e1; width: 275px; font-size: 20px"><c:if
 								test="${pageContext.request.userPrincipal.name == null}">
-								<a style="color: #ffffff" href="<c:url value='/lost' />">Втрачені</a>
+								<a style="color: #000000" href="<c:url value='/lost' />">втрачені</a>
 							</c:if> <c:if test="${pageContext.request.userPrincipal.name != null}">
-								<a style="color: #ffffff" href="<c:url value='/admin-lost' />">Втрачені</a>
+								<a style="color: #000000" href="<c:url value='/admin-lost' />">втрачені</a>
 							</c:if></li>
 
 						<li
-							style="background-color: #05a800; width: 275px; font-size: 20px"><c:if
+							style="background-color: #797979; width: 275px; font-size: 20px"><c:if
 								test="${pageContext.request.userPrincipal.name == null}">
-								<a style="color: #000000" href="<c:url value='/found' />">Знайдені</a>
+								<a style="color: #ffffff" href="<c:url value='/found' />">знайдені</a>
 							</c:if> <c:if test="${pageContext.request.userPrincipal.name != null}">
-								<a style="color: #000000" href="<c:url value='/admin-found' />">Знайдені</a>
+								<a style="color: #ffffff" href="<c:url value='/admin-found' />">знайдені</a>
 							</c:if></li>
 
 						<li
-							style="background-color: #efff11; width: 275px; font-size: 20px"><a
-							style="color: #000000" href="<c:url value='/new' />">Додати
+							style="background-color: #353535; width: 275px; font-size: 20px"><a
+							style="color: #ffffff" href="<c:url value='/new' />">додати
 								річ</a></li>
 
 						<li
 							style="background-color: #000000; width: 266px; font-size: 20px"><c:if
 								test="${pageContext.request.userPrincipal.name == null}">
 								<a style="color: #ffffff" href="<c:url value='/admin' />"
-									class="log">Вхід</a>
+									class="log">вхід</a>
 							</c:if> <c:if test="${pageContext.request.userPrincipal.name != null}">
 								<a style="color: #ffffff" href="<c:url value="/logout" />"
-									class="log">Вихід</a>
+									class="log">вихід</a>
 							</c:if></li>
 					</ul>
 				</div>

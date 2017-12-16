@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Бюро знахідок онлайн</title>
 
+<link rel="icon" type="image/png" href="/static/images/icon.png" />
+
 <link
 	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
 	href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
@@ -20,85 +22,96 @@
 	<div>
 		<%@include file="header.jsp"%>
 	</div>
-	<div>Заявка</div>
-	<div>
-		<form:form method="POST" modelAttribute="thing">
-			<form:input type="hidden" path="id" id="id" />
 
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Ім'я</label>
-				<div class="col-sm-3">
-					<form:input type="text" path="name" id="name" size="21"
-						maxlength="20" class="form-control" />
-				</div>
-				<div class="col-sm-6">
-					<form:errors path="name" style="color: #ff0000"
-						class="alert alert-danger" />
-				</div>
-			</div>
+	<div class="body">
 
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Місце:</label>
-				<div class="col-sm-3">
-					<form:input type="text" path="place" id="place" size="31"
-						maxlength="30" class="form-control" />
-				</div>
-				<div class="col-sm-6">
-					<form:errors path="name" style="color: #ff0000"
-						class="alert alert-danger" />
-				</div>
-			</div>
+		<div class="form">
 
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Дата:</label>
-				<div class="col-sm-3">
-					<form:input type="date" path="date" id="date" class="form-control" />
-				</div>
-				<div class="col-sm-6">
-					<form:errors path="name" style="color: #ff0000"
-						class="alert alert-danger" />
-				</div>
-			</div>
+			<form:form method="POST" modelAttribute="thing"
+				class="form-horizontal">
+				<form:input type="hidden" path="id" id="id" />
 
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Номер телефону:</label>
-				<div class="col-sm-3">
-					<form:input type="text" path="phoneNumber" id="phoneNumber"
-						size="16" maxlength="15" class="form-control" />
-				</div>
-				<div class="col-sm-6">
-					<form:errors path="name" style="color: #ff0000"
-						class="alert alert-danger" />
-				</div>
-			</div>
+				<legend>заявка</legend>
 
-			<div class="form-group">
-				<label class="col-sm-2 control-label">Втрачена/знайдена:</label>
-				<div class="col-sm-3">
-					<form:input type="text" path="lostOrFound" id="lostOrFound"
-						size="11" maxlength="10" class="form-control" />
+				<div class="form-group">
+					<label class="col-sm-2 control-label">назва</label>
+					<div class="col-sm-3">
+						<form:input type="text" path="name" id="name" size="21"
+							maxlength="20" class="form-control" />
+					</div>
+					<div id="error" class="col-sm-6">
+						<form:errors path="name" style="color: #ff0000"
+							class="alert alert-danger" />
+					</div>
 				</div>
-				<div class="col-sm-6">
-					<form:errors path="name" style="color: #ff0000"
-						class="alert alert-danger" />
+
+				<hr />
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">місце</label>
+					<div class="col-sm-3">
+						<form:input type="text" path="place" id="place" size="31"
+							maxlength="30" class="form-control" />
+					</div>
+					<div id="error" class="col-sm-6">
+						<form:errors path="place" style="color: #ff0000"
+							class="alert alert-danger" />
+					</div>
 				</div>
-			</div>
 
-			<br />
-			<c:choose>
-				<c:when test="${edit}">
-					<input type="submit" value="Оновити" />
-				</c:when>
-				<c:otherwise>
-					<input type="submit" value="Додати" />
-				</c:otherwise>
-			</c:choose>
-		</form:form>
+				<hr />
 
-		<div>
-			<%@include file="footer.jsp"%>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">дата</label>
+					<div class="col-sm-3">
+						<form:input type="date" path="date" id="date" class="form-control" />
+					</div>
+				</div>
+
+				<hr />
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">номер телефону</label>
+					<div class="col-sm-3">
+						<form:input type="text" path="phoneNumber" id="phoneNumber"
+							size="16" maxlength="15" class="form-control" />
+					</div>
+					<div id="error" class="col-sm-6">
+						<form:errors path="phoneNumber" style="color: #ff0000"
+							class="alert alert-danger" />
+					</div>
+				</div>
+
+				<hr />
+
+				<div class="form-group">
+					<label class="col-sm-2 control-label">втрачена/знайдена</label>
+					<div class="col-sm-3">
+						<form:input type="text" path="lostOrFound" id="lostOrFound"
+							size="11" maxlength="10" class="form-control" />
+					</div>
+					<div id="error" class="col-sm-6">
+						<form:errors path="lostOrFound" style="color: #ff0000"
+							class="alert alert-danger" />
+					</div>
+				</div>
+
+				<hr />
+
+				<c:choose>
+					<c:when test="${edit}">
+						<input type="submit" value="оновити" />
+					</c:when>
+					<c:otherwise>
+						<input type="submit" value="додати" />
+					</c:otherwise>
+				</c:choose>
+			</form:form>
 		</div>
+	</div>
 
+	<div>
+		<%@include file="footer.jsp"%>
 	</div>
 </body>
 </html>

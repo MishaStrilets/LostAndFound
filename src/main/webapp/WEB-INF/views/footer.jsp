@@ -7,8 +7,8 @@
 	<div class="container">
 		<div class="footer">
 			<p>
-				Контактна інформація: <a href="mailto:mishastrilets@gmail.com"
-					class="foot">mishastrilets@gmail.com</a>.
+				контактна інформація: <a href="mailto:mishastrilets@gmail.com"
+					class="foot">mishastrilets@gmail.com</a>
 			</p>
 		</div>
 	</div>

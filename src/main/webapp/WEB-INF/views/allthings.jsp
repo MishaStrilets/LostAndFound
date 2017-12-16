@@ -10,6 +10,8 @@
 
 <title>Бюро знахідок онлайн</title>
 
+<link rel="icon" type="image/png" href="/static/images/icon.png" />
+
 <link
 	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
 	href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
@@ -22,48 +24,52 @@
 	<div>
 		<%@include file="header.jsp"%>
 	</div>
-	<div>
-		<h2 align="center">Список речей</h2>
 
-		<table align="center">
-			<tr>
-				<th>Ім'я</th>
-				<th>Місце</th>
-				<th>Дата</th>
-				<th>Номер телефону</th>
-				<th>Втрачена/знайдена</th>
-			</tr>
-			<c:forEach items="${things}" var="thing">
+	<div class="body">
+
+		<div class="table">
+			<h2>cписок речей</h2>
+			<table>
 				<tr>
-					<td nowrap>${thing.name}</td>
-					<td>${thing.place}</td>
-					<td nowrap>${thing.date}</td>
-					<td nowrap>${thing.phoneNumber}</td>
-					<td nowrap>${thing.lostOrFound}</td>
-
-					<c:if test="${pageContext.request.userPrincipal.name != null}">
-						<td nowrap
-							style="background-color: #f9f22a; border: 3px solid #8e8e0c;"><a
-							href="<c:url value='/edit-${thing.id}-thing' />">Редагувати</a></td>
-
-					</c:if>
-
-					<c:if test="${pageContext.request.userPrincipal.name != null}">
-
-
-						<td nowrap
-							style="background-color: #f92c41; border: 3px solid #590310;"><a
-							href="<c:url value='/delete-${thing.id}-thing' />">Видалити</a></td>
-					</c:if>
-
+					<th>назва</th>
+					<th>місце</th>
+					<th>дата</th>
+					<th>номер телефону</th>
+					<th>втрачена/знайдена</th>
 				</tr>
-			</c:forEach>
-		</table>
+				<c:forEach items="${things}" var="thing">
+					<tr>
+						<td>${thing.name}</td>
+						<td>${thing.place}</td>
+						<td>${thing.date}</td>
+						<td>${thing.phoneNumber}</td>
+						<td>${thing.lostOrFound}</td>
 
-		<div>
-			<%@include file="footer.jsp"%>
+						<c:if test="${pageContext.request.userPrincipal.name != null}">
+							<td class="btn"><a
+								style="color: #ffffff; text-decoration: none;"
+								href="<c:url value='/edit-${thing.id}-thing' />">редагувати</a></td>
+
+						</c:if>
+
+						<c:if test="${pageContext.request.userPrincipal.name != null}">
+
+
+							<td class="btn"><a
+								style="color: #ffffff; text-decoration: none;"
+								href="<c:url value='/delete-${thing.id}-thing' />">видалити</a></td>
+
+						</c:if>
+
+					</tr>
+				</c:forEach>
+			</table>
+
 		</div>
+	</div>
 
+	<div>
+		<%@include file="footer.jsp"%>
 	</div>
 </body>
 </html>
