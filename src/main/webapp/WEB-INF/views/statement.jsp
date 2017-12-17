@@ -86,9 +86,13 @@
 
 				<div class="form-group">
 					<label class="col-sm-2 control-label">втрачена/знайдена</label>
-					<div class="col-sm-3">
-						<form:input type="text" path="lostOrFound" id="lostOrFound"
-							size="11" maxlength="10" class="form-control" />
+					<div class="col-sm-2">
+						<form:radiobutton path="lostOrFound" value="Втрачена" />
+						втрачена
+					</div>
+					<div class="col-sm-1">
+						<form:radiobutton path="lostOrFound" value="Знайдена" />
+						знайдена
 					</div>
 					<div id="error" class="col-sm-6">
 						<form:errors path="lostOrFound" style="color: #ff0000"

@@ -30,7 +30,6 @@ public class Thing {
 	@Column(name = "PLACE")
 	private String place;
 
-	@Size(max = 10)
 	@Column(name = "DATE")
 	private String date;
 
@@ -40,7 +39,6 @@ public class Thing {
 	private String phoneNumber;
 
 	@NotBlank
-	@Size(max = 10)
 	@Column(name = "LOST_OR_FOUND")
 	private String lostOrFound;
 

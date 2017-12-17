@@ -49,22 +49,17 @@
 							<td class="btn"><a
 								style="color: #ffffff; text-decoration: none;"
 								href="<c:url value='/edit-${thing.id}-thing' />">редагувати</a></td>
-
 						</c:if>
 
 						<c:if test="${pageContext.request.userPrincipal.name != null}">
-
-
 							<td class="btn"><a
 								style="color: #ffffff; text-decoration: none;"
 								href="<c:url value='/delete-${thing.id}-thing' />">видалити</a></td>
-
 						</c:if>
 
 					</tr>
 				</c:forEach>
 			</table>
-
 		</div>
 	</div>
 

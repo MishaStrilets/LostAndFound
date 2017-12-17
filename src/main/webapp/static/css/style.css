@@ -54,6 +54,7 @@ th {
 	border: 2px solid #a6a6a6;
 	padding: 10px;
 	width: 150px;
+	white-space: nowrap;
 }
 
 td {
@@ -64,13 +65,14 @@ td {
 	border: 2px solid #a6a6a6;
 	padding: 10px;
 	width: 150px;
+	white-space: nowrap;
 }
 
 td.btn {
 	background-color: #000000;
 	color: #ffffff;
 	align: center;
-	width: 150px;
+	width: 110px;
 	height: 30px;
 	font-size: 15px;
 	border: 1px solid #a6a6a6;
