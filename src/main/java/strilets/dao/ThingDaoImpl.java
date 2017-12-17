@@ -11,8 +11,7 @@ import org.springframework.stereotype.Repository;
 import strilets.model.Thing;
 
 @Repository("thingDao")
-public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements
-		ThingDao {
+public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements ThingDao {
 
 	public Thing getThingById(int id) {
 		return getByKey(id);
@@ -23,8 +22,7 @@ public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements
 	}
 
 	public void deleteThing(int id) {
-		Query query = getSession().createSQLQuery(
-				"delete from Thing where id = :id");
+		Query query = getSession().createSQLQuery("delete from Thing where id = :id");
 		query.setLong("id", id);
 		query.executeUpdate();
 	}
@@ -39,18 +37,14 @@ public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements
 	@SuppressWarnings("unchecked")
 	public List<Thing> getLostThings() {
 		Criteria criteria = createEntityCriteria();
-		List<Thing> things = criteria.add(
-				Restrictions.like("lostOrFound", "Lost", MatchMode.ANYWHERE))
-				.list();
+		List<Thing> things = criteria.add(Restrictions.like("lostOrFound", "Втрачена", MatchMode.ANYWHERE)).list();
 		return things;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Thing> getFoundThings() {
 		Criteria criteria = createEntityCriteria();
-		List<Thing> things = criteria.add(
-				Restrictions.like("lostOrFound", "Found", MatchMode.ANYWHERE))
-				.list();
+		List<Thing> things = criteria.add(Restrictions.like("lostOrFound", "Знайдена", MatchMode.ANYWHERE)).list();
 		return things;
 	}
 }
