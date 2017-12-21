@@ -15,7 +15,8 @@ public abstract class AbstrarctDao<PK extends Serializable, T> {
 
 	@SuppressWarnings("unchecked")
 	public AbstrarctDao() {
-		this.persistentClass = (Class<T>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[1];
+		this.persistentClass = (Class<T>) ((ParameterizedType) this.getClass().getGenericSuperclass())
+				.getActualTypeArguments()[1];
 	}
 
 	@Autowired
@@ -25,7 +26,6 @@ public abstract class AbstrarctDao<PK extends Serializable, T> {
 		return sessionFactory.getCurrentSession();
 	}
 
-	@SuppressWarnings("unchecked")
 	public T getByKey(PK key) {
 		return (T) getSession().get(persistentClass, key);
 	}

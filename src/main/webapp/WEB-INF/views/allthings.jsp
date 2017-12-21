@@ -27,38 +27,42 @@
 
 	<div class="body">
 
-		<div class="table">
+		<div class="tab">
 			<h2>cписок речей</h2>
 			<table>
-				<tr>
-					<th>назва</th>
-					<th>місце</th>
-					<th>дата</th>
-					<th>номер телефону</th>
-					<th>втрачена/знайдена</th>
-				</tr>
-				<c:forEach items="${things}" var="thing">
+				<thead>
 					<tr>
-						<td>${thing.name}</td>
-						<td>${thing.place}</td>
-						<td>${thing.date}</td>
-						<td>${thing.phoneNumber}</td>
-						<td>${thing.lostOrFound}</td>
-
-						<c:if test="${pageContext.request.userPrincipal.name != null}">
-							<td class="btn"><a
-								style="color: #ffffff; text-decoration: none;"
-								href="<c:url value='/edit-${thing.id}-thing' />">редагувати</a></td>
-						</c:if>
-
-						<c:if test="${pageContext.request.userPrincipal.name != null}">
-							<td class="btn"><a
-								style="color: #ffffff; text-decoration: none;"
-								href="<c:url value='/delete-${thing.id}-thing' />">видалити</a></td>
-						</c:if>
-
+						<th>назва</th>
+						<th>місце</th>
+						<th>дата</th>
+						<th>номер телефону</th>
+						<th>втрачена/знайдена</th>
 					</tr>
-				</c:forEach>
+				</thead>
+				<tbody>
+					<c:forEach items="${things}" var="thing">
+						<tr style="overflow: auto;">
+							<td>${thing.name}</td>
+							<td>${thing.place}</td>
+							<td>${thing.date}</td>
+							<td>${thing.phoneNumber}</td>
+							<td>${thing.lostOrFound}</td>
+
+							<c:if test="${pageContext.request.userPrincipal.name != null}">
+								<td class="btn"><a
+									style="color: #ffffff; text-decoration: none;"
+									href="<c:url value='/edit-${thing.id}-thing' />">редагувати</a></td>
+							</c:if>
+
+							<c:if test="${pageContext.request.userPrincipal.name != null}">
+								<td class="btn"><a
+									style="color: #ffffff; text-decoration: none;"
+									href="<c:url value='/delete-${thing.id}-thing' />">видалити</a></td>
+							</c:if>
+
+						</tr>
+					</c:forEach>
+				</tbody>
 			</table>
 		</div>
 	</div>
