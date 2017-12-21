@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import strilets.dao.ThingDao;
+import strilets.model.Search;
 import strilets.model.Thing;
 
 @Service("thingService")
@@ -43,12 +44,9 @@ public class ThingServiceImpl implements ThingService {
 		return dao.getAllThings();
 	}
 
-	public List<Thing> getLostThings() {
-		return dao.getLostThings();
-	}
-
-	public List<Thing> getFoundThings() {
-		return dao.getFoundThings();
+	public List<Thing> getThings(Search search) {
+		List<Thing> things = dao.getThings(search);
+		return things;
 	}
 
 }

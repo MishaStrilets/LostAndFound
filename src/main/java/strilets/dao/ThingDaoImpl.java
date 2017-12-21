@@ -8,6 +8,7 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import strilets.model.Search;
 import strilets.model.Thing;
 
 @Repository("thingDao")
@@ -35,16 +36,26 @@ public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements ThingD
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Thing> getLostThings() {
+	public List<Thing> getThings(Search search) {
 		Criteria criteria = createEntityCriteria();
-		List<Thing> things = criteria.add(Restrictions.like("lostOrFound", "Втрачена", MatchMode.ANYWHERE)).list();
+		criteria.list();
+		List<Thing> things;
+
+		if (!("".equals(search.getName())))
+			criteria.add(Restrictions.like("name", search.getName(), MatchMode.ANYWHERE));
+
+		if (search.isLost() && search.isFound()) {
+			things = criteria.list();
+		} else if (search.isLost()) {
+			criteria.add(Restrictions.like("lostOrFound", "Втрачена", MatchMode.ANYWHERE));
+			things = criteria.list();
+		} else if (search.isFound()) {
+			criteria.add(Restrictions.like("lostOrFound", "Знайдена", MatchMode.ANYWHERE));
+			things = criteria.list();
+		} else
+			things = null;
+
 		return things;
 	}
 
-	@SuppressWarnings("unchecked")
-	public List<Thing> getFoundThings() {
-		Criteria criteria = createEntityCriteria();
-		List<Thing> things = criteria.add(Restrictions.like("lostOrFound", "Знайдена", MatchMode.ANYWHERE)).list();
-		return things;
-	}
 }

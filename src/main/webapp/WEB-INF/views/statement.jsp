@@ -31,7 +31,7 @@
 				class="form-horizontal">
 				<form:input type="hidden" path="id" id="id" />
 
-				<legend>заявка</legend>
+				<h2>заявка</h2>
 
 				<div class="form-group">
 					<label class="col-sm-2 control-label">назва</label>

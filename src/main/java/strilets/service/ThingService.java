@@ -2,6 +2,7 @@ package strilets.service;
 
 import java.util.List;
 
+import strilets.model.Search;
 import strilets.model.Thing;
 
 public interface ThingService {
@@ -16,8 +17,6 @@ public interface ThingService {
 
 	List<Thing> getAllThings();
 
-	List<Thing> getLostThings();
-
-	List<Thing> getFoundThings();
+	List<Thing> getThings(Search search);
 
 }

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import strilets.model.Search;
 import strilets.model.Thing;
 import strilets.service.ThingService;
 
@@ -34,30 +35,24 @@ public class AppController {
 	/*
 	 * This method will list all things.
 	 */
-	@RequestMapping(value = { "/", "/list" }, method = { RequestMethod.GET })
-	public String listAllThings(ModelMap model) {
+	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+	public String listThings(ModelMap model) {
 		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
+		Search search = new Search();
+		model.addAttribute("search", search);
 		return "allthings";
 	}
 
 	/*
-	 * This method will list all lost things.
+	 * This method will be called on form submission, handling POST request for
+	 * searching things in database.
 	 */
-	@RequestMapping(value = { "/lost" }, method = { RequestMethod.GET })
-	public String listLostThings(ModelMap model) {
-		List<Thing> things = service.getLostThings();
+	@RequestMapping(value = { "/list" }, method = RequestMethod.POST)
+	public String searchThings(Search search, ModelMap model) {
+		List<Thing> things = service.getThings(search);
 		model.addAttribute("things", things);
-		return "allthings";
-	}
-
-	/*
-	 * This method will list all found things.
-	 */
-	@RequestMapping(value = { "/found" }, method = { RequestMethod.GET })
-	public String listFoundThings(ModelMap model) {
-		List<Thing> things = service.getFoundThings();
-		model.addAttribute("things", things);
+		model.addAttribute("search", search);
 		return "allthings";
 	}
 
@@ -76,8 +71,7 @@ public class AppController {
 	 * saving thing in database.
 	 */
 	@RequestMapping(value = { "/new" }, method = RequestMethod.POST)
-	public String saveThing(@Valid Thing thing, BindingResult result,
-			ModelMap model) {
+	public String saveThing(@Valid Thing thing, BindingResult result, ModelMap model) {
 		if (result.hasErrors()) {
 			return "statement";
 		}
@@ -91,9 +85,23 @@ public class AppController {
 	 * This method will list all things for admin.
 	 */
 	@RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
-	public String admin(ModelMap model) {
+	public String adminListThings(ModelMap model) {
 		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
+		Search search = new Search();
+		model.addAttribute("search", search);
+		return "allthings";
+	}
+
+	/*
+	 * This method will be called on form submission, handling POST request for
+	 * searching things in database for admin.
+	 */
+	@RequestMapping(value = { "/admin" }, method = RequestMethod.POST)
+	public String adminSearchThings(Search search, ModelMap model) {
+		List<Thing> things = service.getThings(search);
+		model.addAttribute("things", things);
+		model.addAttribute("search", search);
 		return "allthings";
 	}
 
@@ -110,15 +118,11 @@ public class AppController {
 	 * This method will logout admin.
 	 */
 	@RequestMapping(value = { "/logout" }, method = RequestMethod.GET)
-	public String logoutPage(HttpServletRequest request,
-			HttpServletResponse response, ModelMap model) {
-		Authentication auth = SecurityContextHolder.getContext()
-				.getAuthentication();
+	public String logoutPage(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		if (auth != null)
 			new SecurityContextLogoutHandler().logout(request, response, auth);
-		List<Thing> things = service.getAllThings();
-		model.addAttribute("things", things);
-		return "allthings";
+		return "redirect:/";
 	}
 
 	/*
@@ -137,33 +141,12 @@ public class AppController {
 	 * database.
 	 */
 	@RequestMapping(value = { "/edit-{id}-thing" }, method = RequestMethod.POST)
-	public String updateThing(@Valid Thing thing, BindingResult result,
-			ModelMap model, @PathVariable Integer id) {
+	public String updateThing(@Valid Thing thing, BindingResult result, ModelMap model, @PathVariable Integer id) {
 		if (result.hasErrors()) {
 			return "statement";
 		}
 		service.updateThing(thing);
 		return "redirect:/admin";
-	}
-
-	/*
-	 * This method will list all lost things for admin.
-	 */
-	@RequestMapping(value = { "/admin-lost" }, method = { RequestMethod.GET })
-	public String listLostThingsAdmin(ModelMap model) {
-		List<Thing> things = service.getLostThings();
-		model.addAttribute("things", things);
-		return "allthings";
-	}
-
-	/*
-	 * This method will list all found things for admin.
-	 */
-	@RequestMapping(value = { "/admin-found" }, method = { RequestMethod.GET })
-	public String listFoundThingsAdmin(ModelMap model) {
-		List<Thing> things = service.getFoundThings();
-		model.addAttribute("things", things);
-		return "allthings";
 	}
 
 }

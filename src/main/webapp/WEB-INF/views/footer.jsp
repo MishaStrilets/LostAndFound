@@ -8,7 +8,7 @@
 		<div class="footer">
 			<p>
 				контактна інформація: <a href="mailto:mishastrilets@gmail.com"
-					class="foot">mishastrilets@gmail.com</a>
+					class="foot">mishastrilets@gmail.com</a> <br />2017
 			</p>
 		</div>
 	</div>

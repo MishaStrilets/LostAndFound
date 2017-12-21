@@ -27,7 +27,39 @@
 
 	<div class="body">
 
-		<div class="tab">
+		<div class="search-form">
+			<h2>пошук</h2>
+
+			<form:form method="POST" modelAttribute="search"
+				class="form-horizontal">
+
+				<div class="row">
+
+					<div class="col-sm-6">
+						<form:input type="search" path="name" id="name"
+							placeholder="назва" class="form-control" />
+					</div>
+
+					<div class="col-sm-2">
+						<form:checkbox path="lost" value="true" />
+						втрачені
+					</div>
+
+					<div class="col-sm-2">
+						<form:checkbox path="found" value="true" />
+						знайдені
+					</div>
+
+					<div class="col-sm-2">
+						<button type="submit" class="button">шукати</button>
+					</div>
+
+				</div>
+			</form:form>
+			<hr />
+		</div>
+
+		<div class="table">
 			<h2>cписок речей</h2>
 			<table>
 				<thead>
@@ -49,13 +81,13 @@
 							<td>${thing.lostOrFound}</td>
 
 							<c:if test="${pageContext.request.userPrincipal.name != null}">
-								<td class="btn"><a
+								<td class="button"><a
 									style="color: #ffffff; text-decoration: none;"
 									href="<c:url value='/edit-${thing.id}-thing' />">редагувати</a></td>
 							</c:if>
 
 							<c:if test="${pageContext.request.userPrincipal.name != null}">
-								<td class="btn"><a
+								<td class="button"><a
 									style="color: #ffffff; text-decoration: none;"
 									href="<c:url value='/delete-${thing.id}-thing' />">видалити</a></td>
 							</c:if>

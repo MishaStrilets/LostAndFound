@@ -2,6 +2,7 @@ package strilets.dao;
 
 import java.util.List;
 
+import strilets.model.Search;
 import strilets.model.Thing;
 
 public interface ThingDao {
@@ -14,8 +15,6 @@ public interface ThingDao {
 
 	List<Thing> getAllThings();
 
-	List<Thing> getLostThings();
-
-	List<Thing> getFoundThings();
+	List<Thing> getThings(Search search);
 
 }
