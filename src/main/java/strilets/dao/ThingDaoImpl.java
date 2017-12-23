@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -31,14 +32,14 @@ public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements ThingD
 	@SuppressWarnings("unchecked")
 	public List<Thing> getAllThings() {
 		Criteria criteria = createEntityCriteria();
-		List<Thing> things = criteria.list();
+		List<Thing> things = criteria.addOrder(Order.desc("id")).list();
 		return things;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Thing> getThings(Search search) {
 		Criteria criteria = createEntityCriteria();
-		criteria.list();
+		criteria.addOrder(Order.desc("id")).list();
 		List<Thing> things;
 
 		if (!("".equals(search.getName())))
