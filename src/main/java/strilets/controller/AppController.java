@@ -32,10 +32,10 @@ public class AppController {
 	@Autowired
 	MessageSource messageSource;
 
-	/*
+	/**
 	 * This method will list all things.
 	 */
-	@RequestMapping(value = { "/", "/list" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/", }, method = RequestMethod.GET)
 	public String listThings(ModelMap model) {
 		List<Thing> things = service.getAllThings();
 		model.addAttribute("things", things);
@@ -44,11 +44,11 @@ public class AppController {
 		return "allthings";
 	}
 
-	/*
+	/**
 	 * This method will be called on form submission, handling POST request for
 	 * searching things in database.
 	 */
-	@RequestMapping(value = { "/list" }, method = RequestMethod.POST)
+	@RequestMapping(value = { "/" }, method = RequestMethod.POST)
 	public String searchThings(Search search, ModelMap model) {
 		List<Thing> things = service.getThings(search);
 		model.addAttribute("things", things);
@@ -56,7 +56,7 @@ public class AppController {
 		return "allthings";
 	}
 
-	/*
+	/**
 	 * This method will return the statement.
 	 */
 	@RequestMapping(value = { "/new" }, method = RequestMethod.GET)
@@ -66,7 +66,7 @@ public class AppController {
 		return "statement";
 	}
 
-	/*
+	/**
 	 * This method will be called on form submission, handling POST request for
 	 * saving thing in database.
 	 */
@@ -76,45 +76,27 @@ public class AppController {
 			return "statement";
 		}
 		service.saveThing(thing);
-		List<Thing> things = service.getAllThings();
-		model.addAttribute("things", things);
-		return "allthings";
+		return "redirect:/";
 	}
 
-	/*
-	 * This method will list all things for admin.
+	/**
+	 * This method will login admin.
 	 */
-	@RequestMapping(value = { "/admin" }, method = RequestMethod.GET)
-	public String adminListThings(ModelMap model) {
-		List<Thing> things = service.getAllThings();
-		model.addAttribute("things", things);
-		Search search = new Search();
-		model.addAttribute("search", search);
-		return "allthings";
+	@RequestMapping(value = { "/admin" })
+	public String adminLogin() {
+		return "redirect:/";
 	}
 
-	/*
-	 * This method will be called on form submission, handling POST request for
-	 * searching things in database for admin.
-	 */
-	@RequestMapping(value = { "/admin" }, method = RequestMethod.POST)
-	public String adminSearchThings(Search search, ModelMap model) {
-		List<Thing> things = service.getThings(search);
-		model.addAttribute("things", things);
-		model.addAttribute("search", search);
-		return "allthings";
-	}
-
-	/*
+	/**
 	 * This method will delete an thing by id.
 	 */
 	@RequestMapping(value = { "/delete-{id}-thing" }, method = RequestMethod.GET)
 	public String deleteThing(@PathVariable int id) {
 		service.deleteThing(id);
-		return "redirect:/admin";
+		return "redirect:/";
 	}
 
-	/*
+	/**
 	 * This method will logout admin.
 	 */
 	@RequestMapping(value = { "/logout" }, method = RequestMethod.GET)
@@ -125,7 +107,7 @@ public class AppController {
 		return "redirect:/";
 	}
 
-	/*
+	/**
 	 * This method will return the statement for update an existing thing.
 	 */
 	@RequestMapping(value = { "/edit-{id}-thing" }, method = RequestMethod.GET)
@@ -136,7 +118,7 @@ public class AppController {
 		return "statement";
 	}
 
-	/*
+	/**
 	 * This method will be called on form submission and updating thing in
 	 * database.
 	 */
@@ -146,7 +128,7 @@ public class AppController {
 			return "statement";
 		}
 		service.updateThing(thing);
-		return "redirect:/admin";
+		return "redirect:/";
 	}
 
 }

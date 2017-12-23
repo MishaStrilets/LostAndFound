@@ -10,14 +10,9 @@
 			<nav class="navbar">
 				<div class="container-fluid">
 					<ul class="nav navbar-nav">
-						<li style="width: 456px; font-size: 20px"><c:if
-								test="${pageContext.request.userPrincipal.name == null}">
-								<a style="color: #ffffff" href="<c:url value='/list' />">втрачені
-									та знайдені речі</a>
-							</c:if> <c:if test="${pageContext.request.userPrincipal.name != null}">
-								<a style="color: #ffffff" href="<c:url value='/admin' />">втрачені
-									та знайдені речі</a>
-							</c:if></li>
+						<li style="width: 456px; font-size: 20px"><a
+							style="color: #ffffff" href="<c:url value='/' />">втрачені та
+								знайдені речі</a></li>
 
 						<li style="width: 455px; font-size: 20px"><a
 							style="color: #ffffff" href="<c:url value='/new' />">додати
