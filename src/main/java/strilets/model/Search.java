@@ -2,6 +2,9 @@ package strilets.model;
 
 public class Search {
 
+	public Search() {
+	}
+
 	private boolean lost;
 
 	private boolean found;
