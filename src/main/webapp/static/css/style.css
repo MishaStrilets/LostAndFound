@@ -1,39 +1,38 @@
 body {
 	font-family: Lucida Console;
 	background-color: #cccccc;
-}
-
-.body {
-	position: fixed;
-	top: 48;
-	height: 85%;
-	width: 100%;
-	background-color: #cccccc;
-	overflow-y: auto;
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .footer {
 	background-color: #333333;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 48px;
+	height: auto;
 	text-align: center;
 	color: #ffffff;
-	padding: 7px;
+	position: absolute;
+	width: 100%;
+	margin-top: 300px;
 }
 
-.header {
-	position: fixed;
-	top: -3;
-	left: -16;
-	right: -16;
-	text-align: center;
+ul.topnav {
+	overflow: hidden;
 	background-color: #666666;
-	height: 57px;
-	width: 1400px;
+}
+
+ul.topnav li {
+	display: inline-block;
+	width: 32%;
+	height: 50px;
+}
+
+ul.topnav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
 }
 
 .table {
@@ -77,11 +76,9 @@ h2, label {
 }
 
 .form {
-	position: fixed;
 	width: 600px;
-	top: 50;
-	left: 50;
 	background-color: #cccccc;
+	margin-left: 50px;
 }
 
 #error {

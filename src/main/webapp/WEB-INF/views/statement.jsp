@@ -23,95 +23,92 @@
 		<%@include file="header.jsp"%>
 	</div>
 
-	<div class="body">
+	<div class="form">
 
-		<div class="form">
+		<form:form method="POST" modelAttribute="thing"
+			class="form-horizontal">
+			<form:input type="hidden" path="id" id="id" />
 
-			<form:form method="POST" modelAttribute="thing"
-				class="form-horizontal">
-				<form:input type="hidden" path="id" id="id" />
+			<h2>заявка</h2>
 
-				<h2>заявка</h2>
-
-				<div class="form-group">
-					<label class="col-sm-2 control-label">назва</label>
-					<div class="col-sm-3">
-						<form:input type="text" path="name" id="name" size="21"
-							maxlength="20" class="form-control" />
-					</div>
-					<div id="error" class="col-sm-6">
-						<form:errors path="name" style="color: #ff0000"
-							class="alert alert-danger" />
-					</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">назва</label>
+				<div class="col-sm-3">
+					<form:input type="text" path="name" id="name" size="21"
+						maxlength="20" class="form-control" />
 				</div>
-
-				<hr />
-
-				<div class="form-group">
-					<label class="col-sm-2 control-label">місце</label>
-					<div class="col-sm-3">
-						<form:input type="text" path="place" id="place" size="31"
-							maxlength="30" class="form-control" />
-					</div>
-					<div id="error" class="col-sm-6">
-						<form:errors path="place" style="color: #ff0000"
-							class="alert alert-danger" />
-					</div>
+				<div id="error" class="col-sm-6">
+					<form:errors path="name" style="color: #ff0000"
+						class="alert alert-danger" />
 				</div>
+			</div>
 
-				<hr />
+			<hr />
 
-				<div class="form-group">
-					<label class="col-sm-2 control-label">дата</label>
-					<div class="col-sm-3">
-						<form:input type="date" path="date" id="date" class="form-control" />
-					</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">місце</label>
+				<div class="col-sm-3">
+					<form:input type="text" path="place" id="place" size="31"
+						maxlength="30" class="form-control" />
 				</div>
-
-				<hr />
-
-				<div class="form-group">
-					<label class="col-sm-2 control-label">номер телефону</label>
-					<div class="col-sm-3">
-						<form:input type="text" path="phoneNumber" id="phoneNumber"
-							size="16" maxlength="15" class="form-control" />
-					</div>
-					<div id="error" class="col-sm-6">
-						<form:errors path="phoneNumber" style="color: #ff0000"
-							class="alert alert-danger" />
-					</div>
+				<div id="error" class="col-sm-6">
+					<form:errors path="place" style="color: #ff0000"
+						class="alert alert-danger" />
 				</div>
+			</div>
 
-				<hr />
+			<hr />
 
-				<div class="form-group">
-					<label class="col-sm-2 control-label">втрачена/знайдена</label>
-					<div class="col-sm-2">
-						<form:radiobutton path="lostOrFound" value="Втрачена" />
-						втрачена
-					</div>
-					<div class="col-sm-1">
-						<form:radiobutton path="lostOrFound" value="Знайдена" />
-						знайдена
-					</div>
-					<div id="error" class="col-sm-6">
-						<form:errors path="lostOrFound" style="color: #ff0000"
-							class="alert alert-danger" />
-					</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">дата</label>
+				<div class="col-sm-3">
+					<form:input type="date" path="date" id="date" class="form-control" />
 				</div>
+			</div>
 
-				<hr />
+			<hr />
 
-				<c:choose>
-					<c:when test="${edit}">
-						<input type="submit" value="оновити" />
-					</c:when>
-					<c:otherwise>
-						<input type="submit" value="додати" />
-					</c:otherwise>
-				</c:choose>
-			</form:form>
-		</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">номер телефону</label>
+				<div class="col-sm-3">
+					<form:input type="text" path="phoneNumber" id="phoneNumber"
+						size="16" maxlength="15" class="form-control" />
+				</div>
+				<div id="error" class="col-sm-6">
+					<form:errors path="phoneNumber" style="color: #ff0000"
+						class="alert alert-danger" />
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="form-group">
+				<label class="col-sm-2 control-label">втрачена/знайдена</label>
+				<div class="col-sm-2">
+					<form:radiobutton path="lostOrFound" value="Втрачена" />
+					втрачена
+				</div>
+				<div class="col-sm-1">
+					<form:radiobutton path="lostOrFound" value="Знайдена" />
+					знайдена
+				</div>
+				<div id="error" class="col-sm-6">
+					<form:errors path="lostOrFound" style="color: #ff0000"
+						class="alert alert-danger" />
+				</div>
+			</div>
+
+			<hr />
+
+			<c:choose>
+				<c:when test="${edit}">
+					<input type="submit" value="оновити" />
+				</c:when>
+				<c:otherwise>
+					<input type="submit" value="додати" />
+				</c:otherwise>
+			</c:choose>
+		</form:form>
 	</div>
 
 	<div>

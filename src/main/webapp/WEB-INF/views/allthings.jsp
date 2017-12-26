@@ -25,7 +25,7 @@
 		<%@include file="header.jsp"%>
 	</div>
 
-	<div class="body">
+	
 
 		<div class="search-form">
 			<h2>пошук</h2>
@@ -97,7 +97,7 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
+	
 
 	<div>
 		<%@include file="footer.jsp"%>
