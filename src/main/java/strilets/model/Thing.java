@@ -90,4 +90,10 @@ public class Thing {
 		this.lostOrFound = lostOrFound;
 	}
 
+	@Override
+	public String toString() {
+		return "Thing [id=" + id + ", name=" + name + ", place=" + place + ", date=" + date + ", phone number="
+				+ phoneNumber + ", lost or found=" + lostOrFound + "]";
+	}
+
 }

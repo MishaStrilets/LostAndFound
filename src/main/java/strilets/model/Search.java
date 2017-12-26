@@ -32,4 +32,9 @@ public class Search {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "Search [name=" + name + ", lost=" + lost + ", found=" + found + "]";
+	}
+
 }
