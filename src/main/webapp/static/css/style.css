@@ -12,7 +12,7 @@ body {
 	color: #ffffff;
 	position: absolute;
 	width: 100%;
-	margin-top: 300px;
+	margin-top: 22%;
 }
 
 ul.topnav {
@@ -49,9 +49,8 @@ table {
 	font-size: 15px;
 }
 
-th {
+th, td {
 	color: #000000;
-	background-color: #999999;
 	text-align: center;
 	height: 30px;
 	border: 2px solid #cccccc;
@@ -60,15 +59,12 @@ th {
 	white-space: nowrap;
 }
 
+th {
+	background-color: #999999;
+}
+
 td {
 	background-color: #ffffff;
-	color: #000000;
-	align: center;
-	height: 30px;
-	border: 2px solid #cccccc;
-	padding: 10px;
-	width: 150px;
-	white-space: nowrap;
 }
 
 h2, label {
