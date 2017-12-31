@@ -55,10 +55,10 @@ public class ThingDaoImpl extends AbstrarctDao<Integer, Thing> implements ThingD
 		if (search.isLost() && search.isFound()) {
 			things = criteria.list();
 		} else if (search.isLost()) {
-			criteria.add(Restrictions.like("lostOrFound", "Втрачена", MatchMode.ANYWHERE));
+			criteria.add(Restrictions.like("lostOrFound", "Р’С‚СЂР°С‡РµРЅР°", MatchMode.ANYWHERE));
 			things = criteria.list();
 		} else if (search.isFound()) {
-			criteria.add(Restrictions.like("lostOrFound", "Знайдена", MatchMode.ANYWHERE));
+			criteria.add(Restrictions.like("lostOrFound", "Р—РЅР°Р№РґРµРЅР°", MatchMode.ANYWHERE));
 			things = criteria.list();
 		} else
 			things = null;
