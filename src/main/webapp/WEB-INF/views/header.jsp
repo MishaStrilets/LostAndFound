@@ -17,5 +17,6 @@
 				<a href="<c:url value="/logout" />" class="log">вихід</a>
 			</c:if></li>
 	</ul>
+	<div class="glass"></div>
 </body>
 </html>

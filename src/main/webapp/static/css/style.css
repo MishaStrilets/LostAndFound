@@ -103,3 +103,20 @@ input[type=date] {
 	width: 300px;
 	color: #000000;
 }
+
+.glass {
+  background: url(/static/images/glass.png);
+  background-size: 100px 100px;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  -webkit-animation:roll 4.5s infinite;
+  -moz-animation:roll 4.5s infinite;
+  animation:roll 4.5s infinite;
+}
+
+@-webkit-keyframes roll { 
+  0% {left:1%;}
+  50% {left:92%;}
+  100% {left:1%;}
+}

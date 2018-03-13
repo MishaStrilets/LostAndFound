@@ -776,3 +776,387 @@
 2018-03-13 02:50:49.061  INFO 2612 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2018-03-13 02:50:49.062  INFO 2612 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 02:49:38 EET 2018]; root of context hierarchy
 2018-03-13 02:50:49.067  INFO 2612 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:00:37.498  INFO 3048 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 3048 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:00:37.507  INFO 3048 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:00:38.622  INFO 3048 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:00:38 EET 2018]; root of context hierarchy
+2018-03-13 03:00:45.848  INFO 3048 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:00:46.003  INFO 3048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:00:46.020  INFO 3048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:00:47.869  INFO 3048 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:00:47.885  INFO 3048 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:00:47.886  INFO 3048 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 9420 ms
+2018-03-13 03:00:48.363  INFO 3048 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:00:48.367  INFO 3048 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:00:48.368  INFO 3048 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:00:49.136  INFO 3048 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:00:50.063  INFO 3048 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:00:50.127  INFO 3048 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 64 ms.
+2018-03-13 03:00:50.454  INFO 3048 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:00:50.462  INFO 3048 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:00:50.466  INFO 3048 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:00:50.590  INFO 3048 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:00:51.033  INFO 3048 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:00:52.579  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:00:52.581  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:00:52.582  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:00:52.583  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:00:52.584  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:00:52.584  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:00:52.585  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:00:52.586  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:00:52.586  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:00:52.603  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:00:52.604  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:00:52.696  INFO 3048 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:00:52.812  INFO 3048 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:00:38 EET 2018]; root of context hierarchy
+2018-03-13 03:00:53.071  INFO 3048 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@1a5d002] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:00:53.635  INFO 3048 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1919544, org.springframework.security.web.context.SecurityContextPersistenceFilter@debbf0, org.springframework.security.web.header.HeaderWriterFilter@736040, org.springframework.security.web.csrf.CsrfFilter@1a2a9fa, org.springframework.security.web.authentication.logout.LogoutFilter@a7e509, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@89a8a8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@13db8e9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e06f7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@edee22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dad32f, org.springframework.security.web.session.SessionManagementFilter@10e9be6, org.springframework.security.web.access.ExceptionTranslationFilter@19cab00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25d790]
+2018-03-13 03:00:54.640  INFO 3048 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:00:54.920  INFO 3048 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-03-13 03:00:54.932  INFO 3048 --- [main] strilets.LostAndFoundApplication         : Started LostAndFoundApplication in 20.665 seconds (JVM running for 25.888)
+2018-03-13 03:01:39.071  INFO 3048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-13 03:01:39.104  INFO 3048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-13 03:01:39.161  INFO 3048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 57 ms
+2018-03-13 03:01:57.589  INFO 3048 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-13 03:01:57.590  INFO 3048 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:00:38 EET 2018]; root of context hierarchy
+2018-03-13 03:01:57.595  INFO 3048 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:04:13.151  INFO 5988 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 5988 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:04:13.165  INFO 5988 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:04:13.390  INFO 5988 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:04:13 EET 2018]; root of context hierarchy
+2018-03-13 03:04:18.343  INFO 5988 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:04:18.386  INFO 5988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:04:18.390  INFO 5988 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:04:19.221  INFO 5988 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:04:19.235  INFO 5988 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:04:19.236  INFO 5988 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5853 ms
+2018-03-13 03:04:19.682  INFO 5988 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:04:19.686  INFO 5988 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:04:19.687  INFO 5988 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:04:20.269  INFO 5988 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:04:20.952  INFO 5988 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:04:20.965  INFO 5988 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 12 ms.
+2018-03-13 03:04:21.330  INFO 5988 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:04:21.338  INFO 5988 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:04:21.342  INFO 5988 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:04:21.487  INFO 5988 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:04:21.867  INFO 5988 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:04:23.830  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:04:23.833  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:04:23.843  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:04:23.845  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:04:23.846  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:04:23.847  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:04:23.849  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:04:23.850  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:04:23.851  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:04:23.878  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:04:23.880  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:04:23.996  INFO 5988 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:04:24.131  INFO 5988 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:04:13 EET 2018]; root of context hierarchy
+2018-03-13 03:04:24.415  INFO 5988 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@53bb6f] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:04:25.126  INFO 5988 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@bb7995, org.springframework.security.web.context.SecurityContextPersistenceFilter@121852b, org.springframework.security.web.header.HeaderWriterFilter@174900b, org.springframework.security.web.csrf.CsrfFilter@97d77, org.springframework.security.web.authentication.logout.LogoutFilter@10ec690, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14d6736, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a027c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18ec001, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1aed682, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fa8766, org.springframework.security.web.session.SessionManagementFilter@e26173, org.springframework.security.web.access.ExceptionTranslationFilter@a11206, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5cdacf]
+2018-03-13 03:04:26.409  INFO 5988 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:04:26.633  INFO 5988 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-03-13 03:04:26.650  INFO 5988 --- [main] strilets.LostAndFoundApplication         : Started LostAndFoundApplication in 14.489 seconds (JVM running for 16.455)
+2018-03-13 03:04:32.828  INFO 5988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-13 03:04:32.829  INFO 5988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-13 03:04:32.872  INFO 5988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 43 ms
+2018-03-13 03:04:46.664  INFO 5988 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-13 03:04:46.665  INFO 5988 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:04:13 EET 2018]; root of context hierarchy
+2018-03-13 03:04:46.671  INFO 5988 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:05:42.752  INFO 3976 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 3976 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:05:42.761  INFO 3976 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:05:43.221  INFO 3976 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:05:43 EET 2018]; root of context hierarchy
+2018-03-13 03:05:48.029  INFO 3976 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:05:48.064  INFO 3976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:05:48.068  INFO 3976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:05:48.726  INFO 3976 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:05:48.740  INFO 3976 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:05:48.741  INFO 3976 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5525 ms
+2018-03-13 03:05:49.198  INFO 3976 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:05:49.202  INFO 3976 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:05:49.203  INFO 3976 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:05:49.757  INFO 3976 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:05:50.391  INFO 3976 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:05:50.430  INFO 3976 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 37 ms.
+2018-03-13 03:05:50.737  INFO 3976 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:05:50.745  INFO 3976 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:05:50.750  INFO 3976 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:05:50.871  INFO 3976 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:05:51.335  INFO 3976 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:05:53.143  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:05:53.145  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:05:53.157  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:05:53.158  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:05:53.159  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:05:53.160  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:05:53.160  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:05:53.161  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:05:53.161  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:05:53.180  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:05:53.182  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:05:53.277  INFO 3976 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:05:53.398  INFO 3976 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:05:43 EET 2018]; root of context hierarchy
+2018-03-13 03:05:53.671  INFO 3976 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@1a745bc] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:05:54.315  INFO 3976 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c6288b, org.springframework.security.web.context.SecurityContextPersistenceFilter@1120021, org.springframework.security.web.header.HeaderWriterFilter@18ec001, org.springframework.security.web.csrf.CsrfFilter@12a2560, org.springframework.security.web.authentication.logout.LogoutFilter@fdb2f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@bb7995, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@a2d6e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@606c91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cb1baf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bd45b, org.springframework.security.web.session.SessionManagementFilter@16c6077, org.springframework.security.web.access.ExceptionTranslationFilter@413ffc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@187305a]
+2018-03-13 03:05:55.613  INFO 3976 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:05:55.841  INFO 3976 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-03-13 03:05:55.853  INFO 3976 --- [main] strilets.LostAndFoundApplication         : Started LostAndFoundApplication in 14.159 seconds (JVM running for 16.054)
+2018-03-13 03:05:59.955  INFO 3976 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-13 03:05:59.956  INFO 3976 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-13 03:06:00.022  INFO 3976 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 66 ms
+2018-03-13 03:06:26.174  INFO 3976 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-13 03:06:26.174  INFO 3976 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:05:43 EET 2018]; root of context hierarchy
+2018-03-13 03:06:26.177  INFO 3976 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:06:55.554  INFO 5344 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 5344 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:06:55.571  INFO 5344 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:06:55.754  INFO 5344 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:06:55 EET 2018]; root of context hierarchy
+2018-03-13 03:07:01.166  INFO 5344 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:07:01.203  INFO 5344 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:07:01.206  INFO 5344 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:07:01.800  INFO 5344 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:07:01.814  INFO 5344 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:07:01.815  INFO 5344 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6068 ms
+2018-03-13 03:07:02.251  INFO 5344 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:07:02.255  INFO 5344 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:07:02.255  INFO 5344 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:07:02.805  INFO 5344 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:07:03.359  INFO 5344 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:07:03.371  INFO 5344 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 11 ms.
+2018-03-13 03:07:03.660  INFO 5344 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:07:03.667  INFO 5344 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:07:03.671  INFO 5344 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:07:03.783  INFO 5344 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:07:04.071  INFO 5344 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:07:05.693  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:07:05.706  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:07:05.707  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:07:05.708  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:07:05.709  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:07:05.709  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:07:05.710  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:07:05.710  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:07:05.711  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:07:05.729  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:07:05.730  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:07:05.817  INFO 5344 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:07:05.925  INFO 5344 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:06:55 EET 2018]; root of context hierarchy
+2018-03-13 03:07:06.290  INFO 5344 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@110455d] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:07:07.052  INFO 5344 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a20bb2, org.springframework.security.web.context.SecurityContextPersistenceFilter@18796c1, org.springframework.security.web.header.HeaderWriterFilter@1f723b0, org.springframework.security.web.csrf.CsrfFilter@1eee94f, org.springframework.security.web.authentication.logout.LogoutFilter@3d1d93, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@187305a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@9cd0f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1be17c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1120021, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1babb67, org.springframework.security.web.session.SessionManagementFilter@d60f2, org.springframework.security.web.access.ExceptionTranslationFilter@d9bc14, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11b8544]
+2018-03-13 03:07:08.528  INFO 5344 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:07:08.714  INFO 5344 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-03-13 03:07:08.725  INFO 5344 --- [main] strilets.LostAndFoundApplication         : Started LostAndFoundApplication in 14.024 seconds (JVM running for 15.517)
+2018-03-13 03:07:20.471  INFO 5344 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-13 03:07:20.472  INFO 5344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-13 03:07:20.552  INFO 5344 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 80 ms
+2018-03-13 03:11:52.880  INFO 5344 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-13 03:11:52.881  INFO 5344 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:06:55 EET 2018]; root of context hierarchy
+2018-03-13 03:11:52.884  INFO 5344 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:12:17.317  INFO 5392 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 5392 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:12:17.326  INFO 5392 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:12:17.499  INFO 5392 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:12:17 EET 2018]; root of context hierarchy
+2018-03-13 03:12:21.435  INFO 5392 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:12:21.471  INFO 5392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:12:21.474  INFO 5392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:12:22.198  INFO 5392 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:12:22.215  INFO 5392 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:12:22.215  INFO 5392 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4723 ms
+2018-03-13 03:12:22.662  INFO 5392 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:12:22.667  INFO 5392 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:12:22.669  INFO 5392 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:12:23.258  INFO 5392 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:12:24.250  INFO 5392 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:12:24.263  INFO 5392 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 12 ms.
+2018-03-13 03:12:24.751  INFO 5392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:12:24.757  INFO 5392 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:12:24.761  INFO 5392 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:12:24.908  INFO 5392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:12:25.276  INFO 5392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:12:27.459  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:12:27.462  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:12:27.472  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:12:27.473  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:12:27.474  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:12:27.475  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:12:27.476  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:12:27.476  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:12:27.477  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:12:27.495  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:12:27.496  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:12:27.585  INFO 5392 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:12:27.694  INFO 5392 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:12:17 EET 2018]; root of context hierarchy
+2018-03-13 03:12:27.926  INFO 5392 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@17f816] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:12:28.478  INFO 5392 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a33c3f, org.springframework.security.web.context.SecurityContextPersistenceFilter@182cf68, org.springframework.security.web.header.HeaderWriterFilter@6f41a9, org.springframework.security.web.csrf.CsrfFilter@1fa1d74, org.springframework.security.web.authentication.logout.LogoutFilter@1aed682, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2924d7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1f1a1ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18796c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c5563d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8625f5, org.springframework.security.web.session.SessionManagementFilter@1f723b0, org.springframework.security.web.access.ExceptionTranslationFilter@7157c7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e9f00b]
+2018-03-13 03:12:29.744  INFO 5392 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:12:29.944  INFO 5392 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-03-13 03:12:29.955  INFO 5392 --- [main] strilets.LostAndFoundApplication         : Started LostAndFoundApplication in 13.403 seconds (JVM running for 14.85)
+2018-03-13 03:12:48.347  INFO 5392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-13 03:12:48.348  INFO 5392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-13 03:12:48.402  INFO 5392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 53 ms
+2018-03-13 03:14:39.858  INFO 3412 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 3412 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:14:39.871  INFO 3412 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:14:40.123  INFO 3412 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:14:40 EET 2018]; root of context hierarchy
+2018-03-13 03:14:44.427  INFO 3412 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:14:44.472  INFO 3412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:14:44.475  INFO 3412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:14:45.083  INFO 3412 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:14:45.093  INFO 3412 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:14:45.095  INFO 3412 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4978 ms
+2018-03-13 03:14:45.459  INFO 3412 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:14:45.462  INFO 3412 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:14:45.463  INFO 3412 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:14:45.955  INFO 3412 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:14:47.581  INFO 3412 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:14:47.752  INFO 3412 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 170 ms.
+2018-03-13 03:14:48.463  INFO 3412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:14:48.472  INFO 3412 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:14:48.476  INFO 3412 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:14:48.630  INFO 3412 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:14:49.102  INFO 3412 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:14:51.562  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:14:51.565  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:14:51.566  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:14:51.567  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:14:51.568  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:14:51.568  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:14:51.569  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:14:51.570  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:14:51.570  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:14:51.589  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:14:51.590  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:14:51.727  INFO 3412 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:14:51.894  INFO 3412 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:14:40 EET 2018]; root of context hierarchy
+2018-03-13 03:14:52.134  INFO 3412 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@951911] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:14:52.715  INFO 3412 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c3ae63, org.springframework.security.web.context.SecurityContextPersistenceFilter@9a6717, org.springframework.security.web.header.HeaderWriterFilter@a2585b, org.springframework.security.web.csrf.CsrfFilter@90b9fa, org.springframework.security.web.authentication.logout.LogoutFilter@9344f5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f68288, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2af059, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1091cad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11e86b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@658f63, org.springframework.security.web.session.SessionManagementFilter@9cedb6, org.springframework.security.web.access.ExceptionTranslationFilter@c47c79, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18b0500]
+2018-03-13 03:14:53.858  INFO 3412 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:14:54.021 ERROR 3412 --- [main] o.a.coyote.http11.Http11NioProtocol      : Failed to start end point associated with ProtocolHandler ["http-nio-8080"]
+
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_101]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_101]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_101]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source) ~[na:1.8.0_101]
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source) ~[na:1.8.0_101]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at strilets.LostAndFoundApplication.main(LostAndFoundApplication.java:17) [classes/:na]
+
+2018-03-13 03:14:54.028 ERROR 3412 --- [main] o.apache.catalina.core.StandardService   : Failed to start connector [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at strilets.LostAndFoundApplication.main(LostAndFoundApplication.java:17) [classes/:na]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_101]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_101]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_101]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source) ~[na:1.8.0_101]
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source) ~[na:1.8.0_101]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	... 14 common frames omitted
+
+2018-03-13 03:14:54.114  INFO 3412 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-03-13 03:14:54.152  INFO 3412 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-03-13 03:14:54.164 ERROR 3412 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-03-13 03:14:54.182  INFO 3412 --- [main] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:14:40 EET 2018]; root of context hierarchy
+2018-03-13 03:14:54.186  INFO 3412 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:16:01.481  INFO 5392 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-13 03:16:01.482  INFO 5392 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:12:17 EET 2018]; root of context hierarchy
+2018-03-13 03:16:01.486  INFO 5392 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2018-03-13 03:16:25.519  INFO 1160 --- [main] strilets.LostAndFoundApplication         : Starting LostAndFoundApplication on MishaStrilets with PID 1160 (D:\Job\Projects\LostAndFound\target\classes started by Misha Strilets in D:\Job\Projects\LostAndFound)
+2018-03-13 03:16:25.530  INFO 1160 --- [main] strilets.LostAndFoundApplication         : No active profile set, falling back to default profiles: default
+2018-03-13 03:16:25.701  INFO 1160 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:16:25 EET 2018]; root of context hierarchy
+2018-03-13 03:16:30.317  INFO 1160 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-03-13 03:16:30.356  INFO 1160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-03-13 03:16:30.358  INFO 1160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.16
+2018-03-13 03:16:30.958  INFO 1160 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2018-03-13 03:16:30.972  INFO 1160 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-03-13 03:16:30.973  INFO 1160 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5281 ms
+2018-03-13 03:16:31.430  INFO 1160 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-03-13 03:16:31.434  INFO 1160 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-03-13 03:16:31.434  INFO 1160 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-03-13 03:16:31.893  INFO 1160 --- [main] o.s.j.d.DriverManagerDataSource          : Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-03-13 03:16:32.651  INFO 1160 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executing SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql]
+2018-03-13 03:16:32.689  INFO 1160 --- [main] o.s.jdbc.datasource.init.ScriptUtils     : Executed SQL script from URL [file:/D:/Job/Projects/LostAndFound/target/classes/schema.sql] in 35 ms.
+2018-03-13 03:16:33.136  INFO 1160 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-03-13 03:16:33.149  INFO 1160 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-03-13 03:16:33.155  INFO 1160 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-03-13 03:16:33.340  INFO 1160 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-03-13 03:16:33.745  INFO 1160 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-03-13 03:16:35.372  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.listThings(org.springframework.ui.ModelMap)
+2018-03-13 03:16:35.374  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.newThing(org.springframework.ui.ModelMap)
+2018-03-13 03:16:35.386  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.searchThings(strilets.model.Search,org.springframework.ui.ModelMap)
+2018-03-13 03:16:35.386  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/new],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.saveThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap)
+2018-03-13 03:16:35.387  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/admin]}" onto public java.lang.String strilets.controller.AppController.adminLogin()
+2018-03-13 03:16:35.388  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/delete-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.deleteThing(int)
+2018-03-13 03:16:35.388  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.logoutPage(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.ui.ModelMap)
+2018-03-13 03:16:35.389  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[GET]}" onto public java.lang.String strilets.controller.AppController.editThing(java.lang.Integer,org.springframework.ui.ModelMap)
+2018-03-13 03:16:35.389  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/edit-{id}-thing],methods=[POST]}" onto public java.lang.String strilets.controller.AppController.updateThing(strilets.model.Thing,org.springframework.validation.BindingResult,org.springframework.ui.ModelMap,java.lang.Integer)
+2018-03-13 03:16:35.408  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-03-13 03:16:35.410  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-03-13 03:16:35.521  INFO 1160 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-03-13 03:16:35.634  INFO 1160 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:16:25 EET 2018]; root of context hierarchy
+2018-03-13 03:16:36.150  INFO 1160 --- [main] o.s.o.h.HibernateTransactionManager      : Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@159f091] of Hibernate SessionFactory for HibernateTransactionManager
+2018-03-13 03:16:37.152  INFO 1160 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1774e29, org.springframework.security.web.context.SecurityContextPersistenceFilter@18ec001, org.springframework.security.web.header.HeaderWriterFilter@e26173, org.springframework.security.web.csrf.CsrfFilter@50ded6, org.springframework.security.web.authentication.logout.LogoutFilter@64f108, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8625f5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1979d34, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16c6077, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d1d93, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f237a, org.springframework.security.web.session.SessionManagementFilter@413ffc, org.springframework.security.web.access.ExceptionTranslationFilter@182cf68, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1efcd90]
+2018-03-13 03:16:38.548  INFO 1160 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-03-13 03:16:38.736  INFO 1160 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-03-13 03:16:38.747  INFO 1160 --- [main] strilets.LostAndFoundApplication         : Started LostAndFoundApplication in 14.149 seconds (JVM running for 15.874)
+2018-03-13 03:16:51.700  INFO 1160 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-03-13 03:16:51.701  INFO 1160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-03-13 03:16:51.747  INFO 1160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+2018-03-13 03:28:18.116  INFO 1160 --- [http-nio-8080-exec-9] strilets.dao.ThingDaoImpl                : Search thing: Search [name=Зошит, lost=false, found=false]
+2018-03-13 03:28:22.568  INFO 1160 --- [http-nio-8080-exec-3] strilets.dao.ThingDaoImpl                : Search thing: Search [name=Зошит, lost=true, found=false]
+2018-03-13 03:28:26.191  INFO 1160 --- [http-nio-8080-exec-6] strilets.dao.ThingDaoImpl                : Search thing: Search [name=Зошит, lost=false, found=true]
+2018-03-13 03:28:29.413  INFO 1160 --- [http-nio-8080-exec-10] strilets.dao.ThingDaoImpl                : Search thing: Search [name=Зошит, lost=true, found=false]
+2018-03-13 03:28:52.905  INFO 1160 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2018-03-13 03:28:52.906  INFO 1160 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d0fbae: startup date [Tue Mar 13 03:16:25 EET 2018]; root of context hierarchy
+2018-03-13 03:28:52.912  INFO 1160 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
